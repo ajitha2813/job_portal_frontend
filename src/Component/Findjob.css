@@ -1,0 +1,25 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;  /* Ensure the page takes up full width */
+    height: 100%;  /* Ensures the page takes up full height */
+  }
+  @media (max-width: 768px) {
+    body, html {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Add responsive design for even smaller screens */
+@media (max-width: 480px) {
+    body, html {
+        font-size: 14px; /* Adjust font size for even smaller screens */
+    }
+}
+
+/* Add responsive design for landscape mode on mobile devices */
+@media (max-width: 768px) and (orientation: landscape) {
+    body, html {
+        font-size: 18px; /* Adjust font size for landscape mode */
+    }
+}

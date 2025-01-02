@@ -1,0 +1,106 @@
+/* Container styling */
+.search-navbar {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+  }
+  
+  /* Navigation bar styling */
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f6eefc;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100vw;
+  }
+  
+  /* Quick filters styling */
+  .quick-filters {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quick-filters-text {
+    margin-left: 5px;
+    color: #6d4dc6;
+    font-weight: bold;
+  }
+  
+  /* Search section styling */
+  .search-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  
+  .search-input {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    flex: 1;
+  }
+  
+  .input {
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    width: 100%;
+    background: white;
+  }
+  
+  /* Filter and button styling */
+  .filter-icon {
+    font-size: 24px;
+    color: #6d4dc6;
+    cursor: pointer;
+  }
+  
+  .find-job-button {
+    background-color: #6d4dc6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 120px;
+  }
+  
+  .icon {
+    font-size: 20px;
+    color: #6d4dc6;
+  }
+  .filter-section {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+  }
+  
+  .filter-icon {
+    font-size: 24px;
+    color: #6d4dc6;
+    cursor: pointer;
+  }
+  
+  .filter-text {
+    font-size: 16px;
+    color: #6d4dc6;
+    font-weight: bold;
+  }
+  

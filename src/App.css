@@ -1,0 +1,20 @@
+/* Layout container */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full-page height */
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  overflow-y: auto; /* Content scrolls */
+  padding: 20px;
+  margin-bottom: 80px; /* Space for footer height */
+}
+
+/* Find Jobs specific styles */
+.content h1 {
+  font-size: 24px;
+  color: #333;
+}

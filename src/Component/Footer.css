@@ -1,0 +1,114 @@
+/* Footer styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 40px;
+  background-color: #4b2c8b; /* Dark purple background */
+  border-top: 1px solid #ddd;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  position: fixed; /* Fixed footer at the bottom */
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  box-sizing: border-box;
+  color: white; /* White text color */
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-section h3 {
+  color: #fff; /* White text color for headings */
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  color: #fff; /* White text for list items */
+  cursor: pointer;
+  text-decoration: none; /* Disable underline */
+}
+
+.footer-section ul li:hover {
+  color: white; /* Change color to white on hover */
+}
+
+.footer-section p {
+  margin: 0 0 10px;
+  color: #ddd; /* Lighter text for paragraph */
+}
+
+.app-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  flex-direction: column;
+
+}
+
+.app-buttons img {
+  width: 120px; /* Adjust width for App Store button */
+  height: auto;
+  cursor: pointer;
+  border-radius: 6px;
+
+}
+
+.app-buttons img:hover {
+  opacity: 0.8;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-section {
+      margin: 0 0 20px;
+      text-align: center;
+  }
+
+  .app-buttons {
+      justify-content: center;
+  }
+}
+/* Copyright section */
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px; /* Space between other sections and copyright */
+  color: #ddd;
+}
+
+.copyright p {
+  margin: 0;
+  font-size: 14px;
+}

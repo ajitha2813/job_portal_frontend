@@ -1,0 +1,126 @@
+/* NavbarBar.css */
+
+.navbar-bar {
+  position: fixed;
+  top: 44px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 98vw;
+}
+
+.skillhire-name h3 {
+  font-size: 1.5rem;
+  color: #6d4dc6; /* Purple color for branding */
+  margin: 0;
+}
+
+.navbar-bar-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.country-dropdown {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  flex: 1;
+  position: relative;
+}
+
+.input {
+  border: none;
+  outline: none;
+  padding-left: 35px; /* Added more space for the icon and placeholder */
+  width: 100%;
+  background: white;
+  font-size: 1rem;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 22px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #6d4dc6;
+}
+
+.add-job-button {
+  display: flex;
+  align-items: center;
+  background-color: #6d4dc6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 24px;
+  width: 200px;
+
+}
+
+.add-job-button .add-icon {
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+.add-job-button:hover {
+  background-color: #543da1;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-icon {
+  font-size: 2rem;
+  color: #6d4dc6;
+}
+
+.username {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Style for the icon before SkillHire */
+.icon-before-skillhire {
+  display: flex;
+  align-items: center;
+  margin-right: 8px; /* Space between the icon and SkillHire name */
+}
+
+.purple-icon {
+  color: purple; /* Purple color for the icon */
+  font-size: 1.5rem; /* Adjust the size of the icon */
+}
