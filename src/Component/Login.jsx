@@ -21,9 +21,14 @@ const Login = () => {
   
       // Log the response data from backend
       console.log('Login successful', response.data);
+      // Store the username or user info in localStorage
+      localStorage.setItem('username', response.data.data.username);
+      localStorage.setItem('authToken',response.data.token);
+      localStorage.setItem('userId',response.data.data._id);
+
   
       // If successful, redirect to dashboard
-      navigate('/findjob');
+      navigate('/Findjob');
     } catch (error) {
       // Log the error response from backend
       if (error.response) {

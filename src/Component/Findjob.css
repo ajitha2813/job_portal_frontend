@@ -1,25 +1,80 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;  /* Ensure the page takes up full width */
-    height: 100%;  /* Ensures the page takes up full height */
+.saved-jobs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-height: 80vh; /* Maximum height to enable scrolling */
+    overflow-y: auto; /* Enable scrolling if content exceeds the height */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
   }
-  @media (max-width: 768px) {
-    body, html {
-        font-size: 16px; /* Adjust font size for smaller screens */
-    }
-}
-
-/* Add responsive design for even smaller screens */
-@media (max-width: 480px) {
-    body, html {
-        font-size: 14px; /* Adjust font size for even smaller screens */
-    }
-}
-
-/* Add responsive design for landscape mode on mobile devices */
-@media (max-width: 768px) and (orientation: landscape) {
-    body, html {
-        font-size: 18px; /* Adjust font size for landscape mode */
-    }
-}
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure it takes full height of its parent */
+    overflow: hidden; /* Hide overflow in case content is too big */
+  }
+  
+  
+  
+  .job-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    max-height: 350px; /* Set a fixed height to prevent overflow */
+    box-sizing: border-box; /* Include padding and borders in the height calculation */
+    position: relative; /* Needed for positioning the bookmark */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Prevent internal overflow of content */
+  }
+  
+  .job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .job-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .job-card p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .job-card .badge {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  
+  .job-card .badge::before {
+    content: "★";
+    margin-right: 5px;
+  }
+  /* Bookmark icon */
+  .job-card .bookmark {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #007bff;
+  }

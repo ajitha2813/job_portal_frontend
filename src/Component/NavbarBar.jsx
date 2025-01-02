@@ -4,7 +4,11 @@ import { FaUserCircle } from "react-icons/fa"; // For user icon
 import { MdOutlineAdd } from "react-icons/md"; // For add button icon
 import { FaStar, FaSearch } from "react-icons/fa"; // Add search icon
 
-const NavbarBar = () => {
+
+  // Fetch the username from localStorage
+  
+const NavbarBar = ({onAddJob}) => {
+  const username = localStorage.getItem("username");
   return (
     <div className="navbar-bar">
       {/* Icon before SkillHire Name */}
@@ -36,17 +40,19 @@ const NavbarBar = () => {
         </div>
       </div>
 
-      {/* Add New Job Button */}
-      <button className="add-job-button">
+       {/* Add New Job Button */}
+       <button className="add-job-button" onClick={onAddJob}>
         <MdOutlineAdd className="add-icon" />
         Add New Job
       </button>
 
+
       {/* User Info on the right */}
       <div className="user-info">
         <FaUserCircle className="user-icon" />
-        <span className="username">Username</span>
+        <span className="username">{username ? username : 'Guest'}</span>
       </div>
+      
     </div>
   );
 };

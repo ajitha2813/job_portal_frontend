@@ -1,28 +1,42 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios'; // Import axios for making API requests
+import axios from 'axios';
 import "./Savedjobsadd.css";
 
 const Savedjobsadd = () => {
   const [jobs, setJobs] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
-    const fetchAllJobs = async () => {
+    const fetchSavedJobs = async () => {
       try {
-        // Make the GET request to your backend to fetch all jobs
-        const response = await axios.get('http://localhost:5000/api/job/getAll'); // Updated endpoint
-        setJobs(response.data); // Assuming the response contains job data directly
+        const userId = localStorage.getItem('userId'); // Get userId from localStorage
+        if (!userId) {
+          setError('User not logged in');
+          setIsLoading(false);
+          return;
+        }
+  
+        // Make the POST request to get saved jobs for the user
+        const response = await axios.post('http://localhost:5000/api/job/getSavedJobs', { userId });
+  
+        if (response.data.isSuccess) {
+          setJobs(response.data.data); // Assuming response contains saved job data
+        } else {
+          setError('No saved jobs found');
+        }
+  
         setIsLoading(false);
       } catch (error) {
-        setError('Error fetching jobs.');
+        setError('Error fetching saved jobs.');
         setIsLoading(false);
         console.error(error);
       }
     };
-
-    fetchAllJobs();
-  }, []); // Empty dependency array ensures this runs only once
+  
+    fetchSavedJobs();
+  }, []);
+  
+  
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -32,7 +46,7 @@ const Savedjobsadd = () => {
     <div className="saved-jobs">
       {error && <p className="error">{error}</p>} {/* Display error if any */}
       {jobs.length === 0 ? (
-        <p>No jobs found.</p> // Display message if no jobs are available
+        <p>No saved jobs found.</p> // Display message if no jobs are available
       ) : (
         jobs.map((job, index) => (
           <div className="job-card" key={index}>

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./Component/Navbar";
 import Login from "./Component/Login";
 import Signup from "./Component/Signup";
-import FindJob from "./Component/Findjob"; // Find Job Page Component
+import Findjob from "./Component/Findjob"; // Find Job Page Component
 import Savedjobsadd from "./Component/Savedjobsadd";
 import NavbarBar from "./Component/NavbarBar";
 import Footer from "./Component/Footer";
@@ -29,7 +29,7 @@ const App = () => {
               <SearchNavBar />
    
               </div>
-              <div className="content"><FindJob /></div>
+              <div className="content"><Findjob /></div>
               <Footer/>
               </div> 
             

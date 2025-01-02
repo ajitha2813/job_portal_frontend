@@ -4,11 +4,24 @@
   gap: 20px;
   justify-content: center;
   padding: 20px;
-  max-height: 80vh; /* Maximum height to enable scrolling */
+  max-height: 40vh; /* Maximum height to enable scrolling */
   overflow-y: auto; /* Enable scrolling if content exceeds the height */
   scroll-behavior: smooth; /* Smooth scrolling effect */
 }
+/* Custom scrollbar styling */
+.saved-jobs::-webkit-scrollbar {
+  width: 6px; /* Small width for the scrollbar */
+}
 
+.saved-jobs::-webkit-scrollbar-thumb {
+  background-color: #4b2c8b; /* Purple color for the scrollbar */
+  border-radius: 10px; /* Rounded corners for the scrollbar */
+}
+
+.saved-jobs::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Light background for the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
 .content {
   display: flex;
   flex-direction: column;
@@ -35,7 +48,7 @@
   position: relative; /* Needed for positioning the bookmark */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* Prevent internal overflow of content */
+  /* Prevent internal overflow of content */
 }
 
 .job-card:hover {
