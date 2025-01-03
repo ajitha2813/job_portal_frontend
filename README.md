@@ -8,7 +8,7 @@ This is the frontend for a Job Portal application built with Vite and React. The
 - [Build](#build)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Installation
 
