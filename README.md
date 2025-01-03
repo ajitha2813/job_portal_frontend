@@ -6,7 +6,6 @@ This is the frontend for a Job Portal application built with Vite and React. The
 - [Installation](#installation)
 - [Development](#development)
 - [Build](#build)
-- [Folder Structure](#folder-structure)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [License](#license)
@@ -44,26 +43,6 @@ npm run build
 ```
 This will create a dist folder with the optimized, production-ready version of the frontend.
 
-# Folder Structure
-graphql
-
-job-portal-frontend/
-│
-├── src/
-│   ├── assets/        # Static assets (images, fonts, etc.)
-│   ├── components/    # Reusable UI components
-│   ├── pages/         # Page components
-│   ├── services/      # API requests and utilities
-│   ├── styles/        # Global styles
-│   ├── App.jsx        # Main application component
-│   ├── index.jsx      # Entry point for React
-│   └── ...
-│
-├── public/  # Public assets (index.html, etc.)
-|---images
-├── vite.config.js     # Vite configuration
-├── package.json       # Project dependencies and scripts
-└── README.md          # This file
 # Technologies Used
 Vite - Fast build tool for modern web development
 React - JavaScript library for building user interfaces
