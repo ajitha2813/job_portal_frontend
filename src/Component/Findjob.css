@@ -7,7 +7,7 @@
     max-height: 80vh; /* Maximum height to enable scrolling */
     overflow-y: auto; /* Enable scrolling if content exceeds the height */
     scroll-behavior: smooth; /* Smooth scrolling effect */
-  }
+}
   
   .content {
     display: flex;
@@ -77,4 +77,48 @@
     font-size: 20px;
     cursor: pointer;
     color: #007bff;
+  }.job-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
   }
+  
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .company-logo {
+    margin-top: 5px;
+  }
+  
+  
+  
+  .salary {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .location {
+    font-size: 12px;
+    color: #555;
+  }
+  
+  .bookmark {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #007bff;
+  }
+  

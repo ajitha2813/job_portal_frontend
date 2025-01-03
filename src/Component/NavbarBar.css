@@ -33,7 +33,8 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-  background-color: #f9f9f9;
+  background-color: #cec9c9;
+  color: #333;
 }
 
 .search-section {
@@ -121,6 +122,6 @@
 }
 
 .purple-icon {
-  color: purple; /* Purple color for the icon */
+  color: rgb(77, 0, 128); /* Purple color for the icon */
   font-size: 1.5rem; /* Adjust the size of the icon */
 }
